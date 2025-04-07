@@ -33,6 +33,5 @@ public abstract class DispositivoTecnologico {
 
     public abstract void mostrarEspecificaciones();
 
-    // Método para obtener la representación JSON del dispositivo.
     public abstract String toJSON();
 }
