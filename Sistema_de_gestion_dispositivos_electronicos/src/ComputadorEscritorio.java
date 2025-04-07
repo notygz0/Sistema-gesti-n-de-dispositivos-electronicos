@@ -1,4 +1,4 @@
-public class ComputadorEscritorio extends dispositivoTecnologico {
+public class ComputadorEscritorio extends DispositivoTecnologico {
     private String tarjetaVideo;
     private String fuentePoder;
     private String chasis;

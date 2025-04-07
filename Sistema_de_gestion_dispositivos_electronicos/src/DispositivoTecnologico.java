@@ -1,10 +1,10 @@
-public abstract class dispositivoTecnologico {
+public abstract class DispositivoTecnologico {
 
     String marca, modelo, procesador;
     int ram, almacenamiento, ano, stock;
     double precio;
 
-    public dispositivoTecnologico(String marca, int ram, int almacenamiento, String procesador, String modelo, int ano, double precio, int stock) {
+    public DispositivoTecnologico(String marca, int ram, int almacenamiento, String procesador, String modelo, int ano, double precio, int stock) {
         this.marca = marca;
         this.ram = ram;
         this.almacenamiento = almacenamiento;
