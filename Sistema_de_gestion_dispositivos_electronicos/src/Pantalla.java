@@ -1,9 +1,9 @@
 public class Pantalla {
     private String marca;
     private String modelo;
-    private String ano;
+    private int ano;
 
-    public Pantalla(String marca, String modelo, String ano) {
+    public Pantalla(String marca, String modelo, int ano) {
         this.marca = marca;
         this.modelo = modelo;
         this.ano = ano;
@@ -11,10 +11,16 @@ public class Pantalla {
 
     @Override
     public String toString() {
-        return "Pantalla{" +
-                "marca='" + marca + '\'' +
-                ", modelo='" + modelo + '\'' +
-                ", anio='" + ano + '\'' +
-                '}';
+        return "Pantalla [Marca=" + marca + ", Modelo=" + modelo + ", Año=" + ano + "]";
     }
+
+    public String toJSON() {
+        return "{ " +
+                "\"marca\": \"" + marca + "\", " +
+                "\"modelo\": \"" + modelo + "\", " +
+                "\"ano\": " + ano +
+                " }";
+    }
+
+
 }

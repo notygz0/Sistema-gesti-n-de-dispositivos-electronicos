@@ -18,21 +18,31 @@ public class Cliente {
         this.ciudad = ciudad;
     }
 
-    public int getId(){
-        return id; }
-    public String getCorreo(){
-        return correo;}
+    public int getId() {
+        return id;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
 
     @Override
     public String toString() {
-        return "Cliente{" +
-                "id=" + id +
-                ", nombre='" + nombre + '\'' +
-                ", apellido='" + apellido + '\'' +
-                ", correo='" + correo + '\'' +
-                ", numeroContacto='" + numeroContacto + '\'' +
-                ", estadoCivil='" + estadoCivil + '\'' +
-                ", ciudad='" + ciudad + '\'' +
-                '}';
+        return "Cliente [ID=" + id + ", Nombre=" + nombre + " " + apellido +
+                ", Correo=" + correo + ", Contacto=" + numeroContacto +
+                ", Estado Civil=" + estadoCivil + ", Ciudad=" + ciudad + "]";
     }
+
+    public String toJSON() {
+        return "{ " +
+                "\"id\": " + id + ", " +
+                "\"nombre\": \"" + nombre + "\", " +
+                "\"apellido\": \"" + apellido + "\", " +
+                "\"correo\": \"" + correo + "\", " +
+                "\"numeroContacto\": \"" + numeroContacto + "\", " +
+                "\"estadoCivil\": \"" + estadoCivil + "\", " +
+                "\"ciudad\": \"" + ciudad + "\"" +
+                " }";
+    }
+
 }

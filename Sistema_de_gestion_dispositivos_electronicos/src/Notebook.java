@@ -14,18 +14,35 @@ public class Notebook extends DispositivoTecnologico {
 
     @Override
     public void mostrarEspecificaciones() {
-        System.out.println("notebook");
-        System.out.println("marca: " + marca);
-        System.out.println("modelo: " + modelo);
-        System.out.println("procesador: " + procesador);
+        System.out.println("Notebook");
+        System.out.println("Marca: " + marca);
+        System.out.println("Modelo: " + modelo);
+        System.out.println("Procesador: " + procesador);
         System.out.println("RAM: " + ram + " GB");
-        System.out.println("almacenamiento: " + almacenamiento + " GB");
-        System.out.println("año: " + ano);
-        System.out.println("precio: " + precio);
-        System.out.println("stock: " + stock);
-        System.out.println("resolucion de pantalla: " + resolucionPantalla);
-        System.out.println("tipo de teclado: " + tipoTeclado);
-        System.out.println("bateria (mAh): " + bateria);
+        System.out.println("Almacenamiento: " + almacenamiento + " GB");
+        System.out.println("Año: " + ano);
+        System.out.println("Precio: $" + precio);
+        System.out.println("Stock: " + stock);
+        System.out.println("Resolución de Pantalla: " + resolucionPantalla);
+        System.out.println("Tipo de Teclado: " + tipoTeclado);
+        System.out.println("Batería (mAh): " + bateria);
+    }
+
+    @Override
+    public String toJSON() {
+        return "{ \"tipo\": \"Notebook\", " +
+                "\"marca\": \"" + marca + "\", " +
+                "\"modelo\": \"" + modelo + "\", " +
+                "\"procesador\": \"" + procesador + "\", " +
+                "\"ram\": " + ram + ", " +
+                "\"almacenamiento\": " + almacenamiento + ", " +
+                "\"ano\": " + ano + ", " +
+                "\"precio\": " + precio + ", " +
+                "\"stock\": " + stock + ", " +
+                "\"resolucionPantalla\": \"" + resolucionPantalla + "\", " +
+                "\"tipoTeclado\": \"" + tipoTeclado + "\", " +
+                "\"bateria\": \"" + bateria + "\" " +
+                "}";
     }
 }
 
