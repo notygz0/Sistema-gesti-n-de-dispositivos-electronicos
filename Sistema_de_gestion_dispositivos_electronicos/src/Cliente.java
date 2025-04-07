@@ -17,4 +17,9 @@ public class Cliente {
         this.estadoCivil = estadoCivil;
         this.ciudad = ciudad;
     }
-}
+
+    public int getId(){
+        return id; }
+    public String getCorreo(){
+        return correo;}
+
