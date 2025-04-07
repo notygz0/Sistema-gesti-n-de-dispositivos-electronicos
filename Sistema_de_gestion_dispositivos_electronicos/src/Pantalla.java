@@ -14,7 +14,13 @@ public class Pantalla {
         return "Pantalla [Marca=" + marca + ", Modelo=" + modelo + ", Año=" + ano + "]";
     }
 
-    
+    public String toJSON() {
+        return "{ " +
+                "\"marca\": \"" + marca + "\", " +
+                "\"modelo\": \"" + modelo + "\", " +
+                "\"ano\": " + ano +
+                " }";
+    }
 
 
 }

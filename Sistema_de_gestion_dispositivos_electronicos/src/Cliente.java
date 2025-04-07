@@ -33,4 +33,16 @@ public class Cliente {
                 ", Estado Civil=" + estadoCivil + ", Ciudad=" + ciudad + "]";
     }
 
+    public String toJSON() {
+        return "{ " +
+                "\"id\": " + id + ", " +
+                "\"nombre\": \"" + nombre + "\", " +
+                "\"apellido\": \"" + apellido + "\", " +
+                "\"correo\": \"" + correo + "\", " +
+                "\"numeroContacto\": \"" + numeroContacto + "\", " +
+                "\"estadoCivil\": \"" + estadoCivil + "\", " +
+                "\"ciudad\": \"" + ciudad + "\"" +
+                " }";
+    }
+
 }
