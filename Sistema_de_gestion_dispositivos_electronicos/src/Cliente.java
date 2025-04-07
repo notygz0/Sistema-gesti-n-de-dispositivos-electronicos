@@ -23,3 +23,16 @@ public class Cliente {
     public String getCorreo(){
         return correo;}
 
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", correo='" + correo + '\'' +
+                ", numeroContacto='" + numeroContacto + '\'' +
+                ", estadoCivil='" + estadoCivil + '\'' +
+                ", ciudad='" + ciudad + '\'' +
+                '}';
+    }
+}
