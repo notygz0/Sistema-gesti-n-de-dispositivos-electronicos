@@ -21,7 +21,7 @@ public class GestorArchivo {
             System.out.println("el archivo no pudo ser creado");
         }
     }
-
+    
     
     //Metodo para agregar una linea a un archivo ya creado 
     public void agregarLinea(String ruta, String contenido) {
