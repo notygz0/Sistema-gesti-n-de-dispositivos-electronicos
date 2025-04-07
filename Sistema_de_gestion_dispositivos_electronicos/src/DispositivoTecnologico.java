@@ -1,10 +1,10 @@
 public abstract class DispositivoTecnologico {
+    protected String marca, modelo, procesador;
+    protected int ram, almacenamiento, ano, stock;
+    protected double precio;
 
-    String marca, modelo, procesador;
-    int ram, almacenamiento, ano, stock;
-    double precio;
-
-    public DispositivoTecnologico(String marca, int ram, int almacenamiento, String procesador, String modelo, int ano, double precio, int stock) {
+    public DispositivoTecnologico(String marca, int ram, int almacenamiento, String procesador,
+                                  String modelo, int ano, double precio, int stock) {
         this.marca = marca;
         this.ram = ram;
         this.almacenamiento = almacenamiento;
@@ -15,6 +15,24 @@ public abstract class DispositivoTecnologico {
         this.stock = stock;
     }
 
+    public String getMarca() {
+        return marca;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void reducirStock(int cantidad) {
+        this.stock -= cantidad;
+    }
+
     public abstract void mostrarEspecificaciones();
 
+    // Método para obtener la representación JSON del dispositivo.
+    public abstract String toJSON();
 }

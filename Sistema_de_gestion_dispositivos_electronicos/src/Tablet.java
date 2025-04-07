@@ -1,7 +1,6 @@
 import java.util.List;
 
-public class Tablet extends DispositivoTecnologico{
-
+public class Tablet extends DispositivoTecnologico {
     private String resolucionPantalla;
     private List<String> accesorios;
 
@@ -16,16 +15,40 @@ public class Tablet extends DispositivoTecnologico{
     @Override
     public void mostrarEspecificaciones() {
         System.out.println("Tablet");
-        System.out.println("marca: " + marca);
-        System.out.println("modelo: " + modelo);
-        System.out.println("procesador: " + procesador);
+        System.out.println("Marca: " + marca);
+        System.out.println("Modelo: " + modelo);
+        System.out.println("Procesador: " + procesador);
         System.out.println("RAM: " + ram + " GB");
-        System.out.println("almacenamiento: " + almacenamiento + " GB");
-        System.out.println("ano: " + ano);
-        System.out.println("precio: " + precio);
-        System.out.println("stock: " + stock);
-        System.out.println("resolucion de la Pantalla: " + resolucionPantalla);
-        System.out.println("accesorios: " + accesorios);
+        System.out.println("Almacenamiento: " + almacenamiento + " GB");
+        System.out.println("Año: " + ano);
+        System.out.println("Precio: $" + precio);
+        System.out.println("Stock: " + stock);
+        System.out.println("Resolución de la Pantalla: " + resolucionPantalla);
+        System.out.println("Accesorios: " + accesorios);
     }
 
+    @Override
+    public String toJSON() {
+        StringBuilder accesoriosJson = new StringBuilder("[");
+        for (int i = 0; i < accesorios.size(); i++) {
+            accesoriosJson.append("\"").append(accesorios.get(i)).append("\"");
+            if (i < accesorios.size() - 1) {
+                accesoriosJson.append(", ");
+            }
+        }
+        accesoriosJson.append("]");
+
+        return "{ \"tipo\": \"Tablet\", " +
+                "\"marca\": \"" + marca + "\", " +
+                "\"modelo\": \"" + modelo + "\", " +
+                "\"procesador\": \"" + procesador + "\", " +
+                "\"ram\": " + ram + ", " +
+                "\"almacenamiento\": " + almacenamiento + ", " +
+                "\"ano\": " + ano + ", " +
+                "\"precio\": " + precio + ", " +
+                "\"stock\": " + stock + ", " +
+                "\"resolucionPantalla\": \"" + resolucionPantalla + "\", " +
+                "\"accesorios\": " + accesoriosJson.toString() +
+                " }";
+    }
 }

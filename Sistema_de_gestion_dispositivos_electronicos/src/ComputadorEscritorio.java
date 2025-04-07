@@ -16,18 +16,36 @@ public class ComputadorEscritorio extends DispositivoTecnologico {
 
     @Override
     public void mostrarEspecificaciones() {
-        System.out.println("computador de escritorio");
-        System.out.println("marca: " + marca);
-        System.out.println("modelo: " + modelo);
-        System.out.println("procesador: " + procesador);
+        System.out.println("Computador de Escritorio");
+        System.out.println("Marca: " + marca);
+        System.out.println("Modelo: " + modelo);
+        System.out.println("Procesador: " + procesador);
         System.out.println("RAM: " + ram + " GB");
-        System.out.println("almacenamiento: " + almacenamiento + " GB");
-        System.out.println("ano: " + ano);
-        System.out.println("precio: " + precio);
-        System.out.println("stock: " + stock);
-        System.out.println("tarjeta de video: " + tarjetaVideo);
-        System.out.println("fuente de poder: " + fuentePoder);
-        System.out.println("chasis: " + chasis);
-        System.out.println("pantalla: " + pantalla.toString());
+        System.out.println("Almacenamiento: " + almacenamiento + " GB");
+        System.out.println("AÃ±o: " + ano);
+        System.out.println("Precio: $" + precio);
+        System.out.println("Stock: " + stock);
+        System.out.println("Tarjeta de Video: " + tarjetaVideo);
+        System.out.println("Fuente de Poder: " + fuentePoder);
+        System.out.println("Chasis: " + chasis);
+        System.out.println("Pantalla: " + pantalla.toString());
+    }
+
+    @Override
+    public String toJSON() {
+        return "{ \"tipo\": \"ComputadorEscritorio\", " +
+                "\"marca\": \"" + marca + "\", " +
+                "\"modelo\": \"" + modelo + "\", " +
+                "\"procesador\": \"" + procesador + "\", " +
+                "\"ram\": " + ram + ", " +
+                "\"almacenamiento\": " + almacenamiento + ", " +
+                "\"ano\": " + ano + ", " +
+                "\"precio\": " + precio + ", " +
+                "\"stock\": " + stock + ", " +
+                "\"tarjetaVideo\": \"" + tarjetaVideo + "\", " +
+                "\"fuentePoder\": \"" + fuentePoder + "\", " +
+                "\"chasis\": \"" + chasis + "\", " +
+                "\"pantalla\": " + pantalla.toJSON() +
+                " }";
     }
 }
