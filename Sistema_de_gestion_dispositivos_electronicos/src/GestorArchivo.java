@@ -1,4 +1,3 @@
-package org.example;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -9,6 +8,7 @@ import java.nio.file.Paths;
  *
  * @author pancho
  */
+//original creado por profesor francisco
 public class GestorArchivo {
     
     //Metodo para crear un archivo 
